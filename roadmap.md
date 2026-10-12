@@ -3,4 +3,5 @@
 - [x] Implement interactive cards, gallery, comparison and navigation.
 - [x] Connect and verify business enquiries.
 - [x] Verify desktop, tablet, mobile and reduced motion.
-- [ ] Owner email notifications — requires a verified owned domain and recipient address.
+- [ ] Owner email notifications — requires a verified owned domain and recipient address.- [x] Split into multi-page site (Home, About, Products & Services, Laboratory, Knowledge Centre + articles, Contact).
+- [ ] Contact details, history, mission/vision — waiting on verified info from client.
