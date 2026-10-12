@@ -14,8 +14,6 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as LaboratoryRouteImport } from './routes/laboratory'
 import { Route as ProductsServicesRouteImport } from './routes/products-services'
-import { Route as KnowledgeCentreIndexRouteImport } from './routes/knowledge-centre.index'
-import { Route as KnowledgeCentreSlugRouteImport } from './routes/knowledge-centre.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -42,16 +40,6 @@ const ProductsServicesRoute = ProductsServicesRouteImport.update({
   path: '/products-services',
   getParentRoute: () => rootRouteImport,
 } as any)
-const KnowledgeCentreIndexRoute = KnowledgeCentreIndexRouteImport.update({
-  id: '/knowledge-centre/',
-  path: '/knowledge-centre/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const KnowledgeCentreSlugRoute = KnowledgeCentreSlugRouteImport.update({
-  id: '/knowledge-centre/$slug',
-  path: '/knowledge-centre/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -59,8 +47,6 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/laboratory': typeof LaboratoryRoute
   '/products-services': typeof ProductsServicesRoute
-  '/knowledge-centre/$slug': typeof KnowledgeCentreSlugRoute
-  '/knowledge-centre/': typeof KnowledgeCentreIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -68,8 +54,6 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/laboratory': typeof LaboratoryRoute
   '/products-services': typeof ProductsServicesRoute
-  '/knowledge-centre/$slug': typeof KnowledgeCentreSlugRoute
-  '/knowledge-centre': typeof KnowledgeCentreIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -78,28 +62,12 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/laboratory': typeof LaboratoryRoute
   '/products-services': typeof ProductsServicesRoute
-  '/knowledge-centre/$slug': typeof KnowledgeCentreSlugRoute
-  '/knowledge-centre/': typeof KnowledgeCentreIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/about'
-    | '/contact'
-    | '/laboratory'
-    | '/products-services'
-    | '/knowledge-centre/$slug'
-    | '/knowledge-centre/'
+  fullPaths: '/' | '/about' | '/contact' | '/laboratory' | '/products-services'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/about'
-    | '/contact'
-    | '/laboratory'
-    | '/products-services'
-    | '/knowledge-centre/$slug'
-    | '/knowledge-centre'
+  to: '/' | '/about' | '/contact' | '/laboratory' | '/products-services'
   id:
     | '__root__'
     | '/'
@@ -107,8 +75,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/laboratory'
     | '/products-services'
-    | '/knowledge-centre/$slug'
-    | '/knowledge-centre/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -117,8 +83,6 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   LaboratoryRoute: typeof LaboratoryRoute
   ProductsServicesRoute: typeof ProductsServicesRoute
-  KnowledgeCentreSlugRoute: typeof KnowledgeCentreSlugRoute
-  KnowledgeCentreIndexRoute: typeof KnowledgeCentreIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -158,20 +122,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductsServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/knowledge-centre/': {
-      id: '/knowledge-centre/'
-      path: '/knowledge-centre'
-      fullPath: '/knowledge-centre/'
-      preLoaderRoute: typeof KnowledgeCentreIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/knowledge-centre/$slug': {
-      id: '/knowledge-centre/$slug'
-      path: '/knowledge-centre/$slug'
-      fullPath: '/knowledge-centre/$slug'
-      preLoaderRoute: typeof KnowledgeCentreSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -181,8 +131,6 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   LaboratoryRoute: LaboratoryRoute,
   ProductsServicesRoute: ProductsServicesRoute,
-  KnowledgeCentreSlugRoute: KnowledgeCentreSlugRoute,
-  KnowledgeCentreIndexRoute: KnowledgeCentreIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
