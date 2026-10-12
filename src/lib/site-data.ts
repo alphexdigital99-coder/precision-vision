@@ -54,11 +54,39 @@ export const products: Product[] = [
   { title: "Tinted & sun lenses", image: images.tints, category: "A DIFFERENT PERSPECTIVE", description: "Discover lens tints for personal style and outdoor visual comfort.", detail: "Lens tints vary in colour and light transmission. A tint alone does not establish UV protection or polarisation. Discuss available specifications and suitability with our team before ordering.", article: "polarised-lenses" },
 ];
 
-export const services = [
-  { title: "Lens fitting", tone: "blue", text: "Lenses prepared and fitted to frames with careful attention to measurements and alignment." },
-  { title: "Lens checking", tone: "mint", text: "Lens power and alignment checked on lensmeters in our laboratory." },
-  { title: "Edge finishing & polishing", tone: "yellow", text: "Lens edges finished and polished on dedicated bench equipment." },
-  { title: "Lens drilling", tone: "coral", text: "Lenses prepared for frames that use drilled mounting." },
+export const business = {
+  address: "No: 164, Dewanampiyathissapura, Anuradhapura, Sri Lanka",
+  mobile: "077 797 1259", mobileHref: "tel:+94777971259", whatsapp: "https://wa.me/94777971259",
+  landline: "025 492 0718", landlineHref: "tel:+94254920718",
+  hours: "07:30 AM – 06:30 PM",
+  mapUrl: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("164 Dewanampiyathissapura, Anuradhapura, Sri Lanka"),
+  mapEmbed: "https://www.google.com/maps?q=" + encodeURIComponent("Dewanampiyathissapura, Anuradhapura, Sri Lanka") + "&output=embed",
+};
+
+export const services: { title: string; tone: string; text: string; list?: string[] }[] = [
+  { title: "Prescription spectacle preparation", tone: "blue", text: "Precision-focused spectacle preparation tailored to individual optical prescriptions, for accurate vision correction and comfort." },
+  { title: "Lens edging & precision fitting", tone: "mint", text: "Accurate edging, grooving and fitting of single vision, bifocal and progressive lenses for a wide range of frame types and materials." },
+  { title: "Lens mounting & frame assembly", tone: "yellow", text: "Professional mounting of lenses and seamless assembly of prescription eyewear to high optical standards." },
+  { title: "Spectacle adjustments & frame maintenance", tone: "coral", text: "Frame care and alignment for long-lasting comfort and correct optical positioning.", list: ["Frame alignment & reshaping", "Temple, bridge & nose pad adjustments", "Frame tightening & comfort fitting", "Lens alignment & realignment", "Screw & nose pad replacement", "Rim & rimless frame repairs", "Lens replacement services", "General spectacle maintenance"] },
+  { title: "Quality inspection & finishing", tone: "blue", text: "Multi-point quality checks and precision finishing to maintain optical clarity and durability." },
+  { title: "Custom optical solutions", tone: "mint", text: "Tailored edging and fitting solutions for complex or non-standard prescription requirements." },
+  { title: "Support for optical practitioners", tone: "yellow", text: "Reliable B2B laboratory services, fast turnaround and technical assistance for optical stores, optometrists and eye care professionals." },
+];
+
+export const capabilities = [
+  { title: "Express & priority processing", text: "Urgent orders are prioritised with rapid processing, without compromising on precision." },
+  { title: "Wide lens selection", text: "We work with lens types available in Sri Lanka and keep imported lenses, frames and spare parts in stock." },
+  { title: "Precision lens processing", text: "Single vision, freeform progressive and high-index lenses." },
+  { title: "Advanced edging & fitting", text: "Computerised cutting and mounting for all frame types, including rimless and half-rim (nylor) frames, using drilling and grooving machinery." },
+  { title: "Coatings & tinting", text: "Blue-cut, photochromic and AR-coated lenses, plus personalised custom tinting." },
+  { title: "Ultrasonic cleaning", text: "Deep cleaning of spectacles as part of our repair and maintenance service." },
+];
+
+export const commitments = [
+  { title: "Dedicated technical support", text: "Our team is available throughout working hours to help troubleshoot complex fitting challenges.", tone: "blue" },
+  { title: "Knowledge sharing", text: "We share guidance, consultations and new optical technologies to help you understand the industry.", tone: "mint" },
+  { title: "Friendly & accessible", text: "When you contact us, you speak directly with experienced technicians.", tone: "yellow" },
+  { title: "Excellence at a fair price", text: "Quality laboratory finishes and personal service at competitive, reasonable prices.", tone: "coral" },
 ];
 
 export type Article = { slug: string; title: string; group: "Lens types" | "Lens coatings"; image: string; summary: string; sections: { heading: string; body: string }[]; related: string[] };
