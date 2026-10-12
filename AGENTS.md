@@ -10,6 +10,6 @@
 <!-- LOVABLE:END -->
 
 ## Application architecture
-- Keep the optical brand experience on the index route with semantic CSS motion and native scrolling; this preserves accessibility without redundant animation libraries.
+- Shared header, footer, scroll reveals and page transitions live in one site layout rendered by the root route; each page is its own route so it is shareable and indexable.
 - Business enquiries use a validated server function and private Cloud tables with atomic rate limiting; visitors must never read submissions.
 - Import authentic media through Lovable Assets pointers and keep the favicon as a real public file; this keeps application media lightweight.
