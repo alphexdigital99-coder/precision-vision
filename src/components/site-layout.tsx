@@ -9,7 +9,6 @@ export const navItems = [
   { to: "/about", label: "About Us" },
   { to: "/products-services", label: "Products & Services" },
   { to: "/laboratory", label: "Our Laboratory" },
-  { to: "/contact", label: "Contact Us" },
 ] as const;
 
 export function Brand() {
@@ -61,7 +60,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-about"><Brand /><p>A family-owned optical fitting laboratory in Anuradhapura, serving optical businesses across Sri Lanka since 2019.</p></div>
-          <nav aria-label="Footer navigation"><h3>Explore</h3>{navItems.map((i) => <Link key={i.to} to={i.to}>{i.label}</Link>)}</nav>
+          <nav aria-label="Footer navigation"><h3>Explore</h3>{navItems.map((i) => <Link key={i.to} to={i.to}>{i.label}</Link>)}<Link to="/contact">Contact Us</Link></nav>
           <div className="footer-contact"><h3>Get in touch</h3><p>{business.address}</p><p><a href={business.mobileHref}>{business.mobile}</a> (Call / WhatsApp)<br /><a href={business.landlineHref}>{business.landline}</a></p><p>{business.hours}</p><Link to="/contact" className="footer-cta">Contact Our Team ↗</Link></div>
         </div>
         <div className="footer-bottom"><p>© {new Date().getFullYear()} Rathnayaka Fitters. All rights reserved.</p><p>Good Lenses. Great People. Better Vision.</p></div>
