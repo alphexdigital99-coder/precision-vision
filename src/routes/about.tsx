@@ -6,28 +6,35 @@ import { images } from "@/lib/site-data";
 
 export const Route = createFileRoute("/about")({
   head: () => ({ meta: [
-    { title: "About Us — Rathnayaka Fitters" },
-    { name: "description", content: "Meet Rathnayaka Fitters, an optical lens-fitting laboratory that combines careful craftsmanship with a personal approach for optical businesses." },
-    { property: "og:title", content: "About Rathnayaka Fitters" },
-    { property: "og:description", content: "Precision is our work. People are our focus." },
+    { title: "About Us — Our Story | Rathnayaka Fitters" },
+    { name: "description", content: "Founded in 2019 in Anuradhapura by B. M. Wasantha Rathnayaka, Rathnayaka Fitters is a family-owned optical fitting laboratory serving Sri Lanka." },
+    { property: "og:title", content: "Our Story — Rathnayaka Fitters" },
+    { property: "og:description", content: "A legacy founded on mastery: a father-and-daughter optical fitting laboratory in Anuradhapura." },
     { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
   ] }),
   component: About,
 });
 
+const timeline = [
+  { when: "20+ years", title: "Experience before the lab", text: "Our founder gained more than two decades of hands-on optical experience in Sri Lanka and internationally." },
+  { when: "14 June 2019", title: "Rathnayaka Fitters founded", text: "B. M. Wasantha Rathnayaka established the fitting laboratory in Dewanampiyathissapura, Anuradhapura." },
+  { when: "June 2025", title: "The next generation joins", text: "His daughter, B. M. Madhuka Prasadini Rathnayake, joined as a Partner, bringing more than 7 years of eyecare industry experience." },
+];
+
 const values = [
-  { icon: Ruler, title: "Precision", text: "Measurements, alignment and finish are checked with care.", tone: "blue" },
-  { icon: Eye, title: "Clarity", text: "Clear explanations of lens options and what each is suited to.", tone: "mint" },
-  { icon: Handshake, title: "Partnership", text: "We work alongside optical businesses and listen to their needs.", tone: "yellow" },
-  { icon: Microscope, title: "Hands-on care", text: "Real people at real benches, attending to every lens.", tone: "coral" },
+  { icon: Ruler, title: "Technical precision", text: "Automatic edging technology and precise optical verification tools on every order.", tone: "blue" },
+  { icon: Eye, title: "Genuine care", text: "Every order is treated as if it were for our own family.", tone: "mint" },
+  { icon: Handshake, title: "Honest service", text: "Dependable, transparent service for practitioners and clients alike.", tone: "yellow" },
+  { icon: Microscope, title: "Continuous innovation", text: "Traditional optical mastery combined with modern management and new technologies.", tone: "coral" },
 ];
 
 function About() {
   return <>
-    <PageHero eyebrow="About Rathnayaka Fitters" title={<>Precision is our work.<br />People are our focus.</>} text="Rathnayaka Fitters is an optical lens-fitting laboratory working with optical businesses. We prepare, check and finish lenses with attention to the details that make a difference." image={images.craft} alt="A Rathnayaka Fitters team member working at the laboratory bench" />
-    <section className="section"><div className="container about-grid"><div className="about-copy reveal"><p className="eyebrow blue">Our approach</p><h2 className="section-heading">Better vision begins<br />with attention to detail.</h2><p className="section-description">Behind every clear view is a lens crafted with care. We combine optical equipment with hands-on experience and a genuine understanding of the people behind every prescription.</p><p className="section-description">For optical shops and business customers, we're here for practical conversations about lens types, fitting requirements and finishing.</p></div><div className="about-image image-reveal reveal"><img src={images.technician} alt="A technician preparing a lens at Rathnayaka Fitters" loading="lazy" /></div></div></section>
-    <section className="section about-section"><div className="container"><div className="section-header reveal"><div><p className="eyebrow blue">What guides our work</p><h2 className="section-heading">Our values.</h2></div></div><div className="info-panels">{values.map((v) => <div key={v.title} className={`info-panel tone-${v.tone} reveal`}><v.icon /><h3>{v.title}</h3><p>{v.text}</p></div>)}</div></div></section>
-    <section className="section"><div className="container"><div className="section-header reveal"><div><p className="eyebrow blue">People & laboratory</p><h2 className="section-heading">Real people. Real precision.</h2></div><p className="section-description">These photographs are from our own laboratory. <Link className="text-link" to="/laboratory">See the full laboratory ↗</Link></p></div><div className="duo-images"><img className="image-reveal reveal" src={images.lab} alt="Rathnayaka Fitters laboratory workbench" loading="lazy" /><img className="image-reveal reveal" src={images.fitting} alt="Spectacle frame with lens-blocking components" loading="lazy" /></div><div className="hero-actions mt-10 reveal"><Button asChild variant="soft"><Link to="/products-services">Our Products & Services <ArrowUpRight /></Link></Button></div></div></section>
-    <CtaBand title="Better vision starts with a good partnership." text="Tell us about your optical business and requirements." label="Contact Our Team" />
+    <PageHero eyebrow="Our story" title={<>A legacy founded<br />on mastery.</>} text="Rathnayaka Fitters was born out of more than two decades of industry expertise, passion and craftsmanship—built on the core values of technical precision and genuine care." image={images.craft} alt="Working at the Rathnayaka Fitters laboratory bench" />
+    <section className="section"><div className="container about-grid"><div className="about-copy reveal"><p className="eyebrow blue">How it began</p><h2 className="section-heading">Dependable fitting,<br />from Anuradhapura.</h2><p className="section-description">After gaining more than 20 years of hands-on experience across Sri Lanka and international optical sectors, founder B. M. Wasantha Rathnayaka established the fitting laboratory on 14 June 2019, in Dewanampiyathissapura, Anuradhapura.</p><p className="section-description">The company was created to offer dependable, high-quality spectacle fitting and lens preparation services.</p></div><div className="about-image image-reveal reveal"><img src={images.technician} alt="Preparing a lens at Rathnayaka Fitters" loading="lazy" /></div></div></section>
+    <section className="section about-section"><div className="container"><div className="section-header reveal"><div><p className="eyebrow blue">Father & daughter leadership</p><h2 className="section-heading">A next-generation<br />partnership.</h2></div><p className="section-description">Decades of traditional optical mastery, combined with modern optical management and innovation—a family-owned business dedicated to quality care.</p></div><ol className="stage-list">{timeline.map((t) => <li key={t.title} className="reveal"><span className="panel-number">{t.when}</span><h3>{t.title}</h3><p>{t.text}</p></li>)}</ol></div></section>
+    <section className="section"><div className="container"><div className="section-header reveal"><div><p className="eyebrow blue">Uncompromising quality & care</p><h2 className="section-heading">What guides our work.</h2></div><p className="section-description">Today we serve optical practitioners, eye care providers and individual clients with precision and dedication.</p></div><div className="info-panels">{values.map((v) => <div key={v.title} className={`info-panel tone-${v.tone} reveal`}><v.icon /><h3>{v.title}</h3><p>{v.text}</p></div>)}</div></div></section>
+    <section className="section about-section"><div className="container"><div className="section-header reveal"><div><p className="eyebrow blue">Our vision</p><h2 className="section-heading">Clearer, more comfortable vision.</h2></div><p className="section-description">Our aim is to deliver precise and comfortable visual solutions to eye doctors, eye hospitals and every customer who comes to us—and to keep expanding our services alongside advances in eye care technology.</p></div><div className="duo-images"><img className="image-reveal reveal" src={images.lab} alt="Rathnayaka Fitters laboratory workbench" loading="lazy" /><img className="image-reveal reveal" src={images.digitalMeter} alt="Digital lensmeter in our laboratory" loading="lazy" /></div><div className="hero-actions mt-10 reveal"><Button asChild variant="soft"><Link to="/products-services">Our Products & Services <ArrowUpRight /></Link></Button><Button asChild variant="soft"><Link to="/laboratory">Our Laboratory <ArrowUpRight /></Link></Button></div></div></section>
+    <CtaBand title="Partner with us today." text="Talk to our team about your optical processing needs." label="Contact Our Team" />
   </>;
 }

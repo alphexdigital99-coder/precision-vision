@@ -2,7 +2,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ArrowUp, ArrowUpRight, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { images } from "@/lib/site-data";
+import { business, images } from "@/lib/site-data";
 
 export const navItems = [
   { to: "/", label: "Home" },
@@ -61,10 +61,10 @@ export function SiteLayout({ children }: { children: ReactNode }) {
     <footer className="footer site-footer">
       <div className="container">
         <div className="footer-grid">
-          <div className="footer-about"><Brand /><p>An optical lens-fitting laboratory working with optical businesses. Good Lenses. Great People. Better Vision.</p></div>
+          <div className="footer-about"><Brand /><p>A family-owned optical fitting laboratory in Anuradhapura, serving optical businesses across Sri Lanka since 2019.</p></div>
           <nav aria-label="Footer navigation"><h3>Explore</h3>{navItems.map((i) => <Link key={i.to} to={i.to}>{i.label}</Link>)}</nav>
           <nav aria-label="Lens information"><h3>Lenses & services</h3><Link to="/products-services">Products & Services</Link><Link to="/knowledge-centre/$slug" params={{ slug: "single-vision-lenses" }}>Single vision lenses</Link><Link to="/knowledge-centre/$slug" params={{ slug: "progressive-lenses" }}>Progressive lenses</Link><Link to="/knowledge-centre/$slug" params={{ slug: "lens-coatings" }}>Lens coatings</Link></nav>
-          <div><h3>Get in touch</h3><p>Send a business enquiry and our team will reply.</p><Link to="/contact" className="footer-cta">Contact Our Team ↗</Link></div>
+          <div className="footer-contact"><h3>Get in touch</h3><p>{business.address}</p><p><a href={business.mobileHref}>{business.mobile}</a> (Call / WhatsApp)<br /><a href={business.landlineHref}>{business.landline}</a></p><p>{business.hours}</p><Link to="/contact" className="footer-cta">Contact Our Team ↗</Link></div>
         </div>
         <div className="footer-bottom"><p>© {new Date().getFullYear()} Rathnayaka Fitters. All rights reserved.</p><p>Good Lenses. Great People. Better Vision.</p></div>
       </div>
