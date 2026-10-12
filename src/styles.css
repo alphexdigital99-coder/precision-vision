@@ -44,6 +44,7 @@
 /* multi-page */
 .page-enter{animation:page-in .45s ease both}@keyframes page-in{from{opacity:.4;transform:translateY(8px)}to{opacity:1;transform:none}}
 .desktop-nav{gap:22px}.desktop-nav .nav-link{white-space:nowrap}
+@media(min-width:901px) and (max-width:1150px){.container{padding:0 24px}.desktop-nav{gap:13px}.desktop-nav .nav-link{font-size:11px}.header-cta{height:36px;padding:0 13px;font-size:10px}.brand-name span{letter-spacing:1.4px}}
 .nav-link.active{color:var(--primary)}
 @media(max-width:900px){.desktop-nav{display:none}.menu-toggle{display:inline-flex;width:40px;height:40px}.mobile-nav{display:grid;position:absolute;top:100%;left:0;right:0;background:var(--background);padding:22px 35px;gap:14px;border-bottom:1px solid var(--border);box-shadow:var(--shadow-soft);animation:page-in .25s ease both}.mobile-nav .nav-link{padding:8px 0;font-size:16px}}
 .page-hero{position:relative;overflow:hidden;background:var(--blue-pale);padding:80px 0 70px}.page-hero .optical-rings{opacity:.6}.page-hero-inner{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}.page-hero h1{font-size:clamp(36px,5vw,58px);line-height:1.05;margin:14px 0 20px;animation:rise .8s cubic-bezier(.2,.7,.2,1) both}.page-hero-copy .section-description{max-width:520px}.page-hero .hero-actions{margin-top:28px;opacity:1;transform:none;animation:none}.page-hero-image{aspect-ratio:1.15;border-radius:8px;overflow:hidden;box-shadow:var(--shadow-soft)}.page-hero-image img{width:100%;height:100%;object-fit:cover;animation:photo-reveal 1.2s ease both}
