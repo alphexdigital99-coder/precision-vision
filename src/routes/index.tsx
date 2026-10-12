@@ -8,7 +8,7 @@ import { commitments, images, labPhotos, products } from "@/lib/site-data";
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
     { title: "Rathnayaka Fitters — Good Lenses. Great People. Better Vision." },
-    { name: "description", content: "Rathnayaka Fitters is an optical fitting laboratory in Anuradhapura, Sri Lanka, serving optical businesses island-wide. Explore our services, laboratory and lens knowledge." },
+    { name: "description", content: "Rathnayaka Fitters is an optical fitting laboratory in Anuradhapura, Sri Lanka, serving optical businesses island-wide. Explore our services, our laboratory and the lenses we work with." },
     { property: "og:title", content: "Rathnayaka Fitters — Better Vision" },
     { property: "og:description", content: "Good Lenses. Great People. Better Vision. An optical lens-fitting laboratory for optical businesses." },
     { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
@@ -34,7 +34,7 @@ function Index() {
 
     <section className="section gallery-section"><div className="container"><div className="section-header reveal"><div><p className="eyebrow blue">Our laboratory</p><h2 className="section-heading">Behind every lens,<br />a human touch.</h2></div><p className="section-description">A glimpse into our real workspace and equipment. <Link className="text-link" to="/laboratory">Step inside our laboratory ↗</Link></p></div><PhotoGallery photos={[0, 2, 4, 6].map((i) => labPhotos[i]!)} /></div></section>
 
-    <section className="section"><div className="container"><div className="technology-grid"><div className="reveal"><Comparison /></div><div className="reveal"><p className="eyebrow blue">Lens technology</p><h2 className="section-heading">See the science of clarity.</h2><p className="section-description">Lens designs and coatings shape how a wearer sees. Our Knowledge Centre explains single vision, bifocal and progressive lenses, plus anti-reflective, blue-light, photochromic and polarised options.</p><Button asChild variant="soft" className="mt-6"><Link to="/knowledge-centre">Visit the Knowledge Centre <ArrowUpRight /></Link></Button></div></div></div></section>
+    <section className="section"><div className="container"><div className="technology-grid"><div className="reveal"><Comparison /></div><div className="reveal"><p className="eyebrow blue">Lens technology</p><h2 className="section-heading">See the science of clarity.</h2><p className="section-description">Lens designs and coatings shape how a wearer sees. Single vision, bifocal and progressive lenses, plus anti-reflective, blue-light, photochromic and polarised options — tell us what your customers need and our team will advise.</p><Button asChild variant="soft" className="mt-6"><Link to="/products-services">Explore Lens Options <ArrowUpRight /></Link></Button></div></div></div></section>
 
     <section className="section about-section"><div className="container"><div className="section-header reveal"><div><p className="eyebrow blue">Why work with us</p><h2 className="section-heading">Beyond manufacturing:<br />a true partnership.</h2></div></div><div className="info-panels">{commitments.map((p) => <div key={p.title} className={`info-panel tone-${p.tone} reveal`}><Check /><h3>{p.title}</h3><p>{p.text}</p></div>)}</div></div></section>
 
