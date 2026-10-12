@@ -12,6 +12,8 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { SiteLayout } from "@/components/site-layout";
+
 
 function NotFoundComponent() {
   return (
@@ -78,10 +80,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Rathnayaka Fitters | Better Vision" },
-      { name: "description", content: "Optical lens fitting, laboratory craftsmanship and business enquiries at Rathnayaka Fitters." },
-      { property: "og:title", content: "Rathnayaka Fitters | Better Vision" },
-      { property: "og:description", content: "Optical precision. A personal approach." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -120,7 +118,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <SiteLayout><Outlet /></SiteLayout>
     </QueryClientProvider>
   );
 }
