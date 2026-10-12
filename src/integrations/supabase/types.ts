@@ -14,13 +14,66 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      business_enquiries: {
+        Row: {
+          company: string
+          created_at: string
+          email: string
+          id: string
+          interest: string
+          message: string
+          name: string
+          phone: string
+          request_hash: string
+        }
+        Insert: {
+          company: string
+          created_at?: string
+          email: string
+          id?: string
+          interest: string
+          message: string
+          name: string
+          phone?: string
+          request_hash: string
+        }
+        Update: {
+          company?: string
+          created_at?: string
+          email?: string
+          id?: string
+          interest?: string
+          message?: string
+          name?: string
+          phone?: string
+          request_hash?: string
+        }
+        Relationships: []
+      }
+      enquiry_rate_limits: {
+        Row: {
+          attempts: number
+          request_hash: string
+          window_start: string
+        }
+        Insert: {
+          attempts?: number
+          request_hash: string
+          window_start?: string
+        }
+        Update: {
+          attempts?: number
+          request_hash?: string
+          window_start?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      allow_business_enquiry: { Args: { p_hash: string }; Returns: boolean }
     }
     Enums: {
       [_ in never]: never
