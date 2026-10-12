@@ -46,6 +46,8 @@ function Index() {
   const [galleryIndex, setGalleryIndex] = useState<number | null>(null);
   const [comparison, setComparison] = useState(50);
   const progressRef = useRef<HTMLDivElement>(null);
+  const lastFocusedRef = useRef<HTMLElement | null>(null);
+  const restoreFocus = (event: Event) => { event.preventDefault(); lastFocusedRef.current?.focus(); };
   const comparisonRef = useRef<HTMLDivElement>(null);
   const comparisonLineRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -62,6 +64,7 @@ function Index() {
     return () => { window.removeEventListener("scroll", onScroll); cancelAnimationFrame(frame); observer.disconnect(); navObserver.disconnect(); document.removeEventListener("keydown", escape); };
   }, []);
   useEffect(() => { if (comparisonRef.current) comparisonRef.current.style.clipPath = `inset(0 ${100 - comparison}% 0 0)`; if (comparisonLineRef.current) comparisonLineRef.current.style.left = `${comparison}%`; }, [comparison]);
+  useEffect(() => { const rememberFocus = (event: MouseEvent) => { const target = event.target; if (target instanceof Element) { const button = target.closest<HTMLElement>(".gallery-item, .product-link"); if (button) lastFocusedRef.current = button; } }; document.addEventListener("click", rememberFocus, true); return () => document.removeEventListener("click", rememberFocus, true); }, []);
   const product = selectedProduct !== null ? products[selectedProduct] : undefined;
   const photo = galleryIndex !== null ? gallery[galleryIndex] : undefined;
   const movePhoto = (direction: number) => setGalleryIndex((current) => current === null ? null : (current + direction + gallery.length) % gallery.length);
