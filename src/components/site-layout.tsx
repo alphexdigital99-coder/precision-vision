@@ -46,13 +46,13 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         <Brand />
         <nav className="desktop-nav" aria-label="Main navigation">
           {navItems.map((item) => <Link key={item.to} to={item.to} className="nav-link" activeProps={{ className: "active", "aria-current": "page" }} activeOptions={{ exact: item.to === "/" }}>{item.label}</Link>)}
-          <Button asChild variant="optical" className="header-cta"><Link to="/contact">Business Enquiry <ArrowUpRight /></Link></Button>
+          <Button asChild variant="optical" className="header-cta"><Link to="/contact">Contact Us <ArrowUpRight /></Link></Button>
         </nav>
         <Button variant="ghost" size="icon" className="menu-toggle" aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</Button>
       </div>
       {menuOpen && <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">
         {navItems.map((item) => <Link key={item.to} to={item.to} className="nav-link" activeProps={{ className: "active", "aria-current": "page" }} activeOptions={{ exact: item.to === "/" }} onClick={() => setMenuOpen(false)}>{item.label}</Link>)}
-        <Button asChild variant="optical"><Link to="/contact" onClick={() => setMenuOpen(false)}>Business Enquiry <ArrowUpRight /></Link></Button>
+        <Button asChild variant="optical"><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us <ArrowUpRight /></Link></Button>
       </nav>}
     </header>
     <main id="main" key={pathname} className="page-enter">{children}</main>
