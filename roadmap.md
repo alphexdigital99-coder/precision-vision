@@ -7,3 +7,4 @@
 - [x] Split into multi-page site (Home, About, Products & Services, Laboratory, Contact).
 - [x] Knowledge Centre page removed at the owner's request.
 - [x] Real company content from client document added.
+- [x] Header menu verified at laptop and desktop widths; phone menu and its Business Enquiry button verified.

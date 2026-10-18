@@ -70,8 +70,8 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   </>;
 }
 
-export function PageHero({ eyebrow, title, text, image, alt, children }: { eyebrow: string; title: ReactNode; text: string; image?: string; alt?: string; children?: ReactNode }) {
-  return <section className="page-hero"><div className="optical-rings" aria-hidden="true" /><div className="container page-hero-inner"><div className="page-hero-copy"><p className="eyebrow blue">{eyebrow}</p><h1>{title}</h1><p className="section-description">{text}</p>{children && <div className="hero-actions">{children}</div>}</div>{image && <div className="page-hero-image"><img src={image} alt={alt ?? ""} fetchPriority="high" /></div>}</div></section>;
+export function PageHero({ eyebrow, title, text, image, alt, children, imagePosition = "center" }: { eyebrow: string; title: ReactNode; text: string; image?: string; alt?: string; children?: ReactNode; imagePosition?: "top" | "center" }) {
+  return <section className="page-hero"><div className="optical-rings" aria-hidden="true" /><div className="container page-hero-inner"><div className="page-hero-copy"><p className="eyebrow blue">{eyebrow}</p><h1>{title}</h1><p className="section-description">{text}</p>{children && <div className="hero-actions">{children}</div>}</div>{image && <div className={`page-hero-image ${imagePosition === "top" ? "top" : ""}`}><img src={image} alt={alt ?? ""} fetchPriority="high" /></div>}</div></section>;
 }
 
 export function CtaBand({ title, text, label, to = "/contact" }: { title: string; text: string; label: string; to?: "/contact" | "/products-services" | "/laboratory" }) {
