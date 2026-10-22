@@ -1,4 +1,4 @@
-# Rathnayaka Fitters
+# Rathnayaka Fittres
 - [x] Create premium animated website with authentic photographs.
 - [x] Implement interactive cards, gallery, comparison and navigation.
 - [x] Connect and verify business enquiries.
