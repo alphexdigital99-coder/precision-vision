@@ -84,3 +84,7 @@
 
 /* Photo framing: every cropped photo keeps the top of the scene in frame */
 .hero-photo,.page-hero-image img,.about-image img,.duo-images img,.equipment-image img,.gallery-grid .gallery-item:first-child img,.product-visual img,.product-detail img{object-position:top center}
+/* The three wide gallery tiles are short horizontal crops of tall photos: their own anchor keeps each machine in frame */
+.gallery-grid .gallery-item:nth-child(2) img{object-position:top center}
+.gallery-grid .gallery-item:nth-child(3) img{object-position:center 75%}
+.gallery-grid .gallery-item:nth-child(4) img{object-position:center 70%}
