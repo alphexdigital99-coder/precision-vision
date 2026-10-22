@@ -23,8 +23,8 @@ export const images = {
 export type Photo = { image: string; caption: string; alt: string };
 
 export const labPhotos: Photo[] = [
-  { image: images.technician, caption: "Lens preparation, in focus", alt: "Rathnayaka Fitters technician working with lens-fitting equipment" },
-  { image: images.lab, caption: "Inside our optical workspace", alt: "Rathnayaka Fitters laboratory workbench and equipment" },
+  { image: images.technician, caption: "Lens preparation, in focus", alt: "Rathnayaka Fittres technician working with lens-fitting equipment" },
+  { image: images.lab, caption: "Inside our optical workspace", alt: "Rathnayaka Fittres laboratory workbench and equipment" },
   { image: images.digitalMeter, caption: "Digital lensmeter", alt: "Digital lensmeter with an on-screen alignment display in our laboratory" },
   { image: images.manualMeter, caption: "NJC-4 lensmeter", alt: "NJC-4 manual lensmeter in our laboratory" },
   { image: images.polisher, caption: "NH-900 auto polisher", alt: "NH-900 auto polisher with its lid open" },
