@@ -5,10 +5,10 @@ import { business } from "@/lib/site-data";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({ meta: [
-    { title: "Contact Us — Rathnayaka Fitters, Anuradhapura" },
-    { name: "description", content: "Contact Rathnayaka Fitters, No: 164, Dewanampiyathissapura, Anuradhapura. Call or WhatsApp 077 797 1259. Open 07:30 AM – 06:30 PM. Serving island-wide." },
+    { title: "Contact Us — Rathnayaka Fittres, Anuradhapura" },
+    { name: "description", content: "Contact Rathnayaka Fittres, No: 164, Dewanampiyathissapura, Anuradhapura. Call or WhatsApp 077 797 1259. Open 07:30 AM – 06:30 PM. Serving island-wide." },
     { property: "og:title", content: "Let's Talk About Your Optical Requirements" },
-    { property: "og:description", content: "Partner with Rathnayaka Fitters. Call, WhatsApp or send a business enquiry." },
+    { property: "og:description", content: "Partner with Rathnayaka Fittres. Call, WhatsApp or send a business enquiry." },
     { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
   ] }),
   component: Contact,

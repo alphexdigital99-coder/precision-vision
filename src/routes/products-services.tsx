@@ -10,8 +10,8 @@ import { lensCatalogue, materialComparison, type CatalogueItem } from "@/lib/len
 
 export const Route = createFileRoute("/products-services")({
   head: () => ({ meta: [
-    { title: "Lens Catalogue & Services — Rathnayaka Fitters" },
-    { name: "description", content: "Lens designs, materials and coatings from Rathnayaka Fitters, plus edging, fitting and B2B laboratory services for optical businesses across Sri Lanka." },
+    { title: "Lens Catalogue & Services — Rathnayaka Fittres" },
+    { name: "description", content: "Lens designs, materials and coatings from Rathnayaka Fittres, plus edging, fitting and B2B laboratory services for optical businesses across Sri Lanka." },
     { property: "og:title", content: "Precision Lens Solutions for Better Vision" },
     { property: "og:description", content: "Explore lens designs, materials and specialized coatings for optical retailers across Sri Lanka." },
     { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
@@ -43,7 +43,7 @@ function ProductsServices() {
     <section className="section"><div className="container"><div className="section-header reveal"><div><p className="eyebrow blue">Capabilities</p><h2 className="section-heading">Under one roof.</h2></div></div><div className="capability-grid">{capabilities.map((c) => <div key={c.title} className="capability reveal"><h3>{c.title}</h3><p>{c.text}</p></div>)}</div></div></section>
     <section className="section about-section"><div className="container"><div className="section-header reveal"><div><p className="eyebrow blue">From our laboratory</p><h2 className="section-heading">The process, in pictures.</h2></div><p className="section-description"><Link className="text-link" to="/laboratory">Explore our laboratory ↗</Link></p></div><PhotoGallery photos={[5, 3, 7, 6].map((i) => labPhotos[i]!)} /></div></section>
     <section className="section"><div className="container faq-grid"><div className="reveal"><p className="eyebrow blue">Questions</p><h2 className="section-heading">Frequently asked.</h2></div><div className="faq-list reveal">{faqs.map((f) => <details key={f.q} className="faq-item"><summary>{f.q}</summary><p>{f.a}</p></details>)}</div></div></section>
-    <CtaBand title="Find the Right Lens Solution for Your Business" text="Contact Rathnayaka Fitters to discuss available lens options, specifications, laboratory processing, and technical support." label="Business Enquiry" />
+    <CtaBand title="Find the Right Lens Solution for Your Business" text="Contact Rathnayaka Fittres to discuss available lens options, specifications, laboratory processing, and technical support." label="Business Enquiry" />
     <Dialog open={selected !== null} onOpenChange={(o) => { if (!o) setSelected(null); }}><DialogContent onCloseAutoFocus={(e) => { e.preventDefault(); last.current?.focus(); }}>{selected && <><p className="eyebrow blue">Lens option</p><DialogTitle>{selected.title}</DialogTitle><DialogDescription>{selected.summary}</DialogDescription><div className="product-detail"><img src={selected.image} alt={selected.alt} className="catalogue-detail-img" />{selected.detail.map((d) => <p key={d}>{d}</p>)}</div><div className="hero-actions"><Button asChild variant="optical"><Link to="/contact">Enquire About This Lens <ArrowUpRight /></Link></Button></div></>}</DialogContent></Dialog>
   </>;
 }

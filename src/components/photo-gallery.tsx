@@ -15,7 +15,7 @@ export function PhotoGallery({ photos, layout = "editorial" }: { photos: Photo[]
     </div>
     <Dialog open={photo !== undefined} onOpenChange={(o) => { if (!o) setIndex(null); }}>
       <DialogContent onCloseAutoFocus={(e) => { e.preventDefault(); lastRef.current?.focus(); }} className="gallery-dialog" onKeyDown={(e) => { if (e.key === "ArrowRight") move(1); if (e.key === "ArrowLeft") move(-1); }}>
-        {photo && <><DialogTitle>{photo.caption}</DialogTitle><DialogDescription className="sr-only">Authentic photographs from Rathnayaka Fitters.</DialogDescription><img key={photo.image} className="lightbox-photo" src={photo.image} alt={photo.alt} /><div className="lightbox-controls"><p>Rathnayaka Fitters · {(index ?? 0) + 1} / {photos.length}</p><div><Button variant="soft" aria-label="Previous photograph" onClick={() => move(-1)}><ChevronLeft /></Button><Button variant="soft" aria-label="Next photograph" onClick={() => move(1)}><ChevronRight /></Button></div></div></>}
+        {photo && <><DialogTitle>{photo.caption}</DialogTitle><DialogDescription className="sr-only">Authentic photographs from Rathnayaka Fittres.</DialogDescription><img key={photo.image} className="lightbox-photo" src={photo.image} alt={photo.alt} /><div className="lightbox-controls"><p>Rathnayaka Fittres · {(index ?? 0) + 1} / {photos.length}</p><div><Button variant="soft" aria-label="Previous photograph" onClick={() => move(-1)}><ChevronLeft /></Button><Button variant="soft" aria-label="Next photograph" onClick={() => move(1)}><ChevronRight /></Button></div></div></>}
       </DialogContent>
     </Dialog>
   </>;

@@ -12,7 +12,7 @@ export const navItems = [
 ] as const;
 
 export function Brand() {
-  return <Link to="/" className="brand" aria-label="Rathnayaka Fitters home"><img src={images.logo} alt="" width={48} height={48} /><div className="brand-name">Rathnayaka Fitters<span>PRECISION IN EVERY LENS</span></div></Link>;
+  return <Link to="/" className="brand" aria-label="Rathnayaka Fittres home"><img src={images.logo} alt="" width={48} height={48} /><div className="brand-name">Rathnayaka Fittres<span>PRECISION IN EVERY LENS</span></div></Link>;
 }
 
 export function SiteLayout({ children }: { children: ReactNode }) {
@@ -63,7 +63,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           <nav aria-label="Footer navigation"><h3>Explore</h3>{navItems.map((i) => <Link key={i.to} to={i.to}>{i.label}</Link>)}<Link to="/contact">Contact Us</Link></nav>
           <div className="footer-contact"><h3>Get in touch</h3><p>{business.address}</p><p><a href={business.mobileHref}>{business.mobile}</a> (Call / WhatsApp)<br /><a href={business.landlineHref}>{business.landline}</a></p><p>{business.hours}</p><Link to="/contact" className="footer-cta">Contact Our Team ↗</Link></div>
         </div>
-        <div className="footer-bottom"><p>© {new Date().getFullYear()} Rathnayaka Fitters. All rights reserved.</p><p>Designed &amp; Developed by Alphex Digital</p></div>
+        <div className="footer-bottom"><p>© {new Date().getFullYear()} Rathnayaka Fittres. All rights reserved.</p><p>Designed &amp; Developed by Alphex Digital</p></div>
       </div>
     </footer>
     {scrolled && <Button variant="soft" className="back-top" aria-label="Back to top" onClick={() => window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" })}><ArrowUp /></Button>}
