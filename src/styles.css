@@ -83,4 +83,4 @@
 @media(max-width:600px){.catalogue-grid{gap:12px}.catalogue-info{padding:14px}.catalogue-info h3{font-size:13.5px}.compare-table table{min-width:0}.compare-table thead{display:none}.compare-table tr{display:block;padding:14px 16px;border-bottom:1px solid var(--border)}.compare-table tbody th,.compare-table td{display:block;padding:4px 0;border:0;white-space:normal}.compare-table td:before{content:attr(data-label);display:block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--foreground)}}
 
 /* Photo framing: every cropped photo keeps the top of the scene in frame */
-.hero-photo,.page-hero-image img,.about-image img,.duo-images img,.equipment-image img,.gallery-grid .gallery-item img,.product-visual img,.product-detail img{object-position:top center}
+.hero-photo,.page-hero-image img,.about-image img,.duo-images img,.equipment-image img,.gallery-grid .gallery-item:first-child img,.product-visual img,.product-detail img{object-position:top center}
