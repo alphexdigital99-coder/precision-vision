@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, MessageCircle, Phone, Smartphone } from "lucide-react";
 import { EnquiryForm } from "@/components/enquiry-form";
 import { business } from "@/lib/site-data";
 
@@ -19,9 +19,11 @@ function Contact() {
     <section className="section enquiry-section contact-page"><div className="optical-rings" aria-hidden="true" /><div className="lens-watermark" aria-hidden="true" /><div className="container enquiry-grid">
       <div className="enquiry-copy reveal"><p className="eyebrow blue">Partner with us today</p><h1>Let's Talk About Your <span>Optical Requirements.</span></h1><p className="section-description">Deliver the perfect finish to your customers with zero hassle. When you contact us, you speak directly with experienced technicians.</p>
         <div className="contact-cards">
+          <a className="contact-card" href={business.landlineHref}><Phone /><div><strong>{business.landline}</strong><span>Office No</span></div></a>
           <a className="contact-card" href={business.mobileHref}><Phone /><div><strong>{business.mobile}</strong><span>Mobile · Call / WhatsApp</span></div></a>
           <a className="contact-card" href={business.whatsapp} target="_blank" rel="noopener noreferrer"><MessageCircle /><div><strong>Message us on WhatsApp</strong><span>{business.mobile}</span></div></a>
-          <a className="contact-card" href={business.landlineHref}><Phone /><div><strong>{business.landline}</strong><span>Land line</span></div></a>
+          <a className="contact-card" href={business.mobile2Href}><Smartphone /><div><strong>{business.mobile2}</strong><span>Mobile</span></div></a>
+          <a className="contact-card" href={`mailto:${business.email}`}><Mail /><div><strong>{business.email}</strong><span>Email us</span></div></a>
           <div className="contact-card"><Clock /><div><strong>{business.hours}</strong><span>Working hours</span></div></div>
           <a className="contact-card" href={business.mapUrl} target="_blank" rel="noopener noreferrer"><MapPin /><div><strong>{business.address}</strong><span>Serving island-wide · Open in Google Maps</span></div></a>
         </div>
