@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, Mail, MapPin, MessageCircle, Phone, Smartphone } from "lucide-react";
+import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { EnquiryForm } from "@/components/enquiry-form";
 import { business } from "@/lib/site-data";
 
