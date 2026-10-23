@@ -64,9 +64,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           <div className="footer-contact"><h3>Get in touch</h3>
             <ul className="contact-list">
               <li><MapPin aria-hidden="true" /><a href={business.mapUrl} target="_blank" rel="noopener noreferrer">{business.address}</a></li>
-              <li><Phone aria-hidden="true" /><div><a href={business.landlineHref}>{business.landline}</a><span className="lbl">Office No</span></div></li>
-              <li><MessageCircle aria-hidden="true" /><div><a href={business.mobileHref}>{business.mobile}</a><span className="lbl">Call / WhatsApp</span></div></li>
-              <li><Smartphone aria-hidden="true" /><div><a href={business.mobile2Href}>{business.mobile2}</a><span className="lbl">Mobile</span></div></li>
+              <li><Phone aria-hidden="true" /><a href={business.landlineHref}>{business.landline}</a></li>
+              <li><MessageCircle aria-hidden="true" /><a href={business.mobileHref}>{business.mobile}</a></li>
+              <li><Smartphone aria-hidden="true" /><a href={business.mobile2Href}>{business.mobile2}</a></li>
               <li><Mail aria-hidden="true" /><a href={`mailto:${business.email}`}>{business.email}</a></li>
               <li><Clock aria-hidden="true" /><span>{business.hours}</span></li>
             </ul>
