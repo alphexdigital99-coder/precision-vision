@@ -10,3 +10,4 @@
 - [x] Header menu verified at laptop and desktop widths; phone menu and its Contact Us button verified.
 - [x] Header button renamed "Business Enquiry" to "Contact Us" (desktop and phone menu).
 - [x] Photos anchored top centre site-wide; wide gallery tiles and lens renders keep their own anchors.
+- [x] Footer "Get in touch" labels (Office No / Call / WhatsApp / Mobile) removed; numbers keep their icons.
