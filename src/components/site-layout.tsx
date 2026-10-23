@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { ArrowUp, ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUp, ArrowUpRight, Clock, Mail, MapPin, Menu, MessageCircle, Phone, Smartphone, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { business, images } from "@/lib/site-data";
 
@@ -61,7 +61,16 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         <div className="footer-grid">
           <div className="footer-about"><Brand /><p>A family-owned optical fitting laboratory in Anuradhapura, serving optical businesses across Sri Lanka since 2019.</p></div>
           <nav aria-label="Footer navigation"><h3>Explore</h3>{navItems.map((i) => <Link key={i.to} to={i.to}>{i.label}</Link>)}<Link to="/contact">Contact Us</Link></nav>
-          <div className="footer-contact"><h3>Get in touch</h3><p>{business.address}</p><p><a href={business.mobileHref}>{business.mobile}</a> (Call / WhatsApp)<br /><a href={business.landlineHref}>{business.landline}</a></p><p>{business.hours}</p><Link to="/contact" className="footer-cta">Contact Our Team ↗</Link></div>
+          <div className="footer-contact"><h3>Get in touch</h3>
+            <ul className="contact-list">
+              <li><MapPin aria-hidden="true" /><a href={business.mapUrl} target="_blank" rel="noopener noreferrer">{business.address}</a></li>
+              <li><Phone aria-hidden="true" /><div><a href={business.landlineHref}>{business.landline}</a><span className="lbl">Office No</span></div></li>
+              <li><MessageCircle aria-hidden="true" /><div><a href={business.mobileHref}>{business.mobile}</a><span className="lbl">Call / WhatsApp</span></div></li>
+              <li><Smartphone aria-hidden="true" /><div><a href={business.mobile2Href}>{business.mobile2}</a><span className="lbl">Mobile</span></div></li>
+              <li><Mail aria-hidden="true" /><a href={`mailto:${business.email}`}>{business.email}</a></li>
+              <li><Clock aria-hidden="true" /><span>{business.hours}</span></li>
+            </ul>
+            <Link to="/contact" className="footer-cta">Contact Our Team ↗</Link></div>
         </div>
         <div className="footer-bottom"><p>© {new Date().getFullYear()} Rathnayaka Fittres. All rights reserved.</p><p>Designed &amp; Developed by Alphex Digital</p></div>
       </div>

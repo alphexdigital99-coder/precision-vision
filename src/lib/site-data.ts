@@ -57,7 +57,9 @@ export const products: Product[] = [
 export const business = {
   address: "No: 164, Dewanampiyathissapura, Anuradhapura, Sri Lanka",
   mobile: "077 797 1259", mobileHref: "tel:+94777971259", whatsapp: "https://wa.me/94777971259",
+  mobile2: "070 503 1570", mobile2Href: "tel:+94705031570",
   landline: "025 492 0718", landlineHref: "tel:+94254920718",
+  email: "info@rathnayakafittres.com",
   hours: "07:30 AM – 06:30 PM",
   mapUrl: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("164 Dewanampiyathissapura, Anuradhapura, Sri Lanka"),
   mapEmbed: "https://www.google.com/maps?q=" + encodeURIComponent("Dewanampiyathissapura, Anuradhapura, Sri Lanka") + "&output=embed",
