@@ -90,7 +90,7 @@
 /* The three wide gallery tiles are short horizontal crops of tall photos: their own anchor keeps each machine in frame */
 .gallery-grid .gallery-item:nth-child(2) img{object-position:top center}
 .gallery-grid .gallery-item:nth-child(3) img{object-position:center 75%}
-.gallery-grid .gallery-item:nth-child(4) img{object-position:top center}
+.gallery-grid .gallery-item:nth-child(4) img{object-position:center 70%}
 .contact-card.feature{align-items:center;min-height:76px;border-radius:12px;border-color:color-mix(in oklab,var(--primary) 14%,var(--border));transition:border-color .25s,background-color .25s}
 .contact-card.feature:hover,.contact-card-multi.feature:has(a:hover),.contact-card-multi.feature:has(a:focus-visible){transform:none;box-shadow:none;border-color:color-mix(in oklab,var(--primary) 45%,var(--border));background:var(--blue-pale)}
 .contact-card.feature strong{font-size:17px;font-weight:600;letter-spacing:.01em;overflow-wrap:anywhere}
