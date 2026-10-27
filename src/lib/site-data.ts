@@ -61,8 +61,8 @@ export const business = {
   landline: "025 492 0718", landlineHref: "tel:+94254920718",
   email: "info@rathnayakafittres.com",
   hours: "07:30 AM – 06:30 PM",
-  mapUrl: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("164 Dewanampiyathissapura, Anuradhapura, Sri Lanka"),
-  mapEmbed: "https://www.google.com/maps?q=" + encodeURIComponent("Dewanampiyathissapura, Anuradhapura, Sri Lanka") + "&output=embed",
+  mapUrl: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Rathnayaka Fittres, No : 164 Dewanampiyathissapura, Anuradhapura 50000, Sri Lanka"),
+  mapEmbed: "https://www.google.com/maps?q=" + encodeURIComponent("Rathnayaka Fittres, No : 164 Dewanampiyathissapura, Anuradhapura 50000, Sri Lanka") + "&z=17&output=embed",
 };
 
 export const services: { title: string; tone: string; text: string; list?: string[] }[] = [
