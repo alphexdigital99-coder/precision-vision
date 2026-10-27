@@ -19,13 +19,13 @@ function Contact() {
     <section className="section enquiry-section contact-page"><div className="optical-rings" aria-hidden="true" /><div className="lens-watermark" aria-hidden="true" /><div className="container enquiry-grid">
       <div className="enquiry-copy reveal"><p className="eyebrow blue">Partner with us today</p><h1>Let's Talk About Your <span>Optical Requirements.</span></h1><p className="section-description">Deliver the perfect finish to your customers with zero hassle. When you contact us, you speak directly with experienced technicians.</p>
         <div className="contact-cards">
-          <a className="contact-card phone-card" href={business.landlineHref}><Phone /><div><strong>{business.landline}</strong><span>Office telephone</span></div></a>
-          <div className="contact-card phone-card contact-card-multi"><Phone /><div><span>Call our team</span><div className="contact-card-lines"><a href={business.mobileHref}><strong>{business.mobile}</strong></a><a href={business.mobile2Href}><strong>{business.mobile2}</strong></a></div></div></div>
-          <a className="contact-card phone-card whatsapp-card" href={business.whatsapp} target="_blank" rel="noopener noreferrer"><MessageCircle /><div><strong>Message us on WhatsApp</strong><span>{business.mobile}</span></div><em className="chat-pill">Chat with us <ArrowUpRight /></em></a>
+          <a className="contact-card feature" href={business.landlineHref}><Phone /><div><strong>{business.landline}</strong><span>Office telephone</span></div></a>
+          <div className="contact-card feature contact-card-multi"><Phone /><div><span>Call our team</span><div className="contact-card-lines"><a href={business.mobileHref}><strong>{business.mobile}</strong></a><a href={business.mobile2Href}><strong>{business.mobile2}</strong></a></div></div></div>
+          <a className="contact-card feature whatsapp-card" href={business.whatsapp} target="_blank" rel="noopener noreferrer"><MessageCircle /><div><strong>Message us on WhatsApp</strong><span>{business.mobile}</span></div><em className="chat-pill">Chat with us <ArrowUpRight /></em></a>
 
-          <a className="contact-card" href={`mailto:${business.email}`}><Mail /><div><strong>{business.email}</strong><span>Email us</span></div></a>
-          <div className="contact-card"><Clock /><div><strong>{business.hours}</strong><span>Working hours</span></div></div>
-          <a className="contact-card" href={business.mapUrl} target="_blank" rel="noopener noreferrer"><MapPin /><div><strong>{business.address}</strong><span>Serving island-wide · Open in Google Maps</span></div></a>
+          <a className="contact-card feature" href={`mailto:${business.email}`}><Mail /><div><strong>{business.email}</strong><span>Email us</span></div></a>
+          <div className="contact-card feature"><Clock /><div><strong>{business.hours}</strong><span>Working hours</span></div></div>
+          <a className="contact-card feature" href={business.mapUrl} target="_blank" rel="noopener noreferrer"><MapPin /><div><strong>{business.address}</strong><span>Serving island-wide · Open in Google Maps</span></div></a>
         </div>
       </div>
       <div className="reveal"><EnquiryForm /></div>
