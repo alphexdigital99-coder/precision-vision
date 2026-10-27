@@ -72,7 +72,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             </ul>
             <Link to="/contact" className="footer-cta">Contact Our Team ↗</Link></div>
         </div>
-        <div className="footer-bottom"><p>© {new Date().getFullYear()} Rathnayaka Fittres. All rights reserved.</p><p>Designed &amp; Developed by Alphex Digital</p></div>
+        <div className="footer-bottom"><p>© {new Date().getFullYear()} Rathnayaka Fittres. All rights reserved.</p><p>Designed &amp; Developed by <a className="credit-link" href="https://alphexdigital.online/" target="_blank" rel="noopener noreferrer">Alphex Digital</a></p></div>
       </div>
     </footer>
     {scrolled && <Button variant="soft" className="back-top" aria-label="Back to top" onClick={() => window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" })}><ArrowUp /></Button>}
