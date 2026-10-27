@@ -91,13 +91,13 @@
 .gallery-grid .gallery-item:nth-child(2) img{object-position:top center}
 .gallery-grid .gallery-item:nth-child(3) img{object-position:center 75%}
 .gallery-grid .gallery-item:nth-child(4) img{object-position:center 70%}
-.contact-card.phone-card{align-items:center;min-height:76px;border-radius:12px;border-color:color-mix(in oklab,var(--primary) 14%,var(--border));transition:border-color .25s,background-color .25s}
-.contact-card.phone-card:hover,.contact-card-multi.phone-card:has(a:hover),.contact-card-multi.phone-card:has(a:focus-visible){transform:none;box-shadow:none;border-color:color-mix(in oklab,var(--primary) 45%,var(--border));background:var(--blue-pale)}
-.contact-card.phone-card strong{font-size:17px;font-weight:600;letter-spacing:.01em}
-.contact-card.phone-card span{font-size:13.5px}
-.contact-card-multi.phone-card .contact-card-lines{margin-top:2px;row-gap:4px}
-.contact-card-multi.phone-card .contact-card-lines a:hover strong{color:var(--primary)}
+.contact-card.feature{align-items:center;min-height:76px;border-radius:12px;border-color:color-mix(in oklab,var(--primary) 14%,var(--border));transition:border-color .25s,background-color .25s}
+.contact-card.feature:hover,.contact-card-multi.feature:has(a:hover),.contact-card-multi.feature:has(a:focus-visible){transform:none;box-shadow:none;border-color:color-mix(in oklab,var(--primary) 45%,var(--border));background:var(--blue-pale)}
+.contact-card.feature strong{font-size:17px;font-weight:600;letter-spacing:.01em;overflow-wrap:anywhere}
+.contact-card.feature span{font-size:13.5px}
+.contact-card-multi.feature .contact-card-lines{margin-top:2px;row-gap:4px}
+.contact-card-multi.feature .contact-card-lines a:hover strong{color:var(--primary)}
 .whatsapp-card svg{background:var(--mint)!important;color:var(--mint-ink)!important}
 .chat-pill{margin-left:auto;display:inline-flex;align-items:center;gap:4px;font-style:normal;font-size:12px;font-weight:600;color:var(--mint-ink);background:var(--mint);padding:5px 10px;border-radius:999px;white-space:nowrap}
 .chat-pill svg{width:14px!important;height:14px!important;padding:0!important;background:none!important}
-@media(max-width:480px){.chat-pill{display:none}.contact-card-multi.phone-card .contact-card-lines a+a{margin-left:12px;padding-left:12px}}
+@media(max-width:480px){.chat-pill{display:none}.contact-card-multi.feature .contact-card-lines a+a{margin-left:12px;padding-left:12px}}
