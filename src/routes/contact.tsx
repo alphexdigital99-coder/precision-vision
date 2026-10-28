@@ -10,7 +10,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Contact Rathnayaka Fittres, No: 164, Dewanampiyathissapura, Anuradhapura. Call or WhatsApp 077 797 1259. Open 07:30 AM – 06:30 PM. Serving island-wide.",
+          "Contact Rathnayaka Fittres, No: 164, Dewanampiyathissapura, Anuradhapura. Call or WhatsApp +94 77 797 1259. Open 07:30 AM – 06:30 PM. Serving island-wide.",
       },
       { property: "og:title", content: "Let's Talk About Your Optical Requirements" },
       {
