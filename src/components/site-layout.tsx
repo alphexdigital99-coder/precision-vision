@@ -34,8 +34,11 @@ export function SiteLayout({ children }: { children: ReactNode }) {
     setMenuOpen(false);
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.remove("pending"); entry.target.classList.add("visible"); observer.unobserve(entry.target); } }), { threshold: 0.08 });
-    const frame = requestAnimationFrame(() => document.querySelectorAll(".reveal:not(.visible)").forEach((el) => { if (el.getBoundingClientRect().top > window.innerHeight) el.classList.add("pending"); observer.observe(el); }));
-    return () => { cancelAnimationFrame(frame); observer.disconnect(); };
+    // Wait until the page has finished hydrating before touching classes, otherwise React reports a hydration mismatch.
+    const start = () => document.querySelectorAll(".reveal:not(.visible)").forEach((el) => { if (el.getBoundingClientRect().top > window.innerHeight) el.classList.add("pending"); observer.observe(el); });
+    const idle = "requestIdleCallback" in window;
+    const handle = idle ? window.requestIdleCallback(start, { timeout: 700 }) : window.setTimeout(start, 250);
+    return () => { if (idle) window.cancelIdleCallback(handle); else window.clearTimeout(handle); observer.disconnect(); };
   }, [pathname]);
 
   return <>
