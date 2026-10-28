@@ -3,7 +3,7 @@ import { getRequestHeader } from "@tanstack/react-start/server";
 import { enquirySchema } from "./enquiry-schema";
 
 export const submitEnquiry = createServerFn({ method: "POST" })
-  .inputValidator((input: unknown) => enquirySchema.parse(input))
+  .validator((input: unknown) => enquirySchema.parse(input))
   .handler(async ({ data }) => {
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const address =

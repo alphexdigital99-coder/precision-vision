@@ -1,0 +1,14 @@
+[build]
+  command = "vite build"
+  publish = "dist"
+
+[dev]
+  # The Lovable Vite config serves the app on port 8080
+  targetPort = 8080
+
+# Media is stored in Lovable Assets; proxy those pointers to the Lovable project host
+[[redirects]]
+  from = "/__l5e/*"
+  to = "https://2d72b6ce-56a5-423b-9483-97273dfb1adb.lovableproject.com/__l5e/:splat"
+  status = 200
+  force = true
